@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: restart the bot whenever user says hi
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+ 
+# - rule: fallback
+#   steps:
+#   - intent: nlu_fallback  # Use the built-in fallback intent
+#   - condition: 
+#     - nlu_fallback_confidence < 0.7  # Check confidence threshold
+#   - action: utter_fallback  # Trigger the custom action
+
+
+# - rule: say 'i don't understand,can you please rephrase' anytime an unknown input comes
+#   steps:
+#   - intent: fallback
+#   - action: utter_default

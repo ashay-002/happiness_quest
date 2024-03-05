@@ -1,0 +1,95 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - help
+  - depression
+  - stress
+  - happyreason
+  - anxiety
+
+
+actions:
+  - action_restart_conversation
+  - action_goodbye
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://drive.google.com/file/d/1-ESTvw4OBFSCCmhtKZUdOBDxzSDwkojG/view?usp=sharing"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great to hear you are doing good! Do you want to talk about it?"
+
+  utter_ask:
+  - text: "what make you feel happy today?"
+
+  utter_respond:
+  - text: "Great, it's such a fantastic feeling to be happy.Being happy can improve your overall well-being and contribute to positive mindset. 
+  It can boost your mood, reduce stress and increase resilence . Have a good day"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_console:
+  - text: "oh i am sorry that you are still feeling down. Do you want to talk about it?"
+
+  utter_share:
+  - text: "ok,i respect your decision but sharing can sometimes bring a sense of relief"
+
+  utter_talk:
+  - text: "Do you want to talk about it?"
+
+  utter_help:
+  - text: "how can i help you today"
+
+  utter_specify:
+  - text: "great, would you share how you are currenly feeling?"
+
+  utter_stress:
+  - text: "i guess you are a bit stressed, do you want to know more about dealing with it"
+
+  utter_depressed:
+  - text: "i guess you are going through a phase of depression, do you want to know more about dealing with it"
+
+  utter_anxiety:
+  - text: "i guess you are feeling a bit anxious, do you want to know more about dealing with it"
+
+
+  utter_wrong: 
+  - text: "if the given statement is incorrect please type no"
+
+  utter_link1:
+  - text: "here is a page that will help you"
+
+  utter_link2:
+  - text: "here is a page that will help you"
+
+  utter_link3:
+  - text: "here is a page that will help you"
+
+  utter_unknown:
+  - text: "sorry i can't help you with that right now. type hi to restart"
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

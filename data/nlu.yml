@@ -1,0 +1,142 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey theres
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - see you
+    - good bye
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - okay
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - don't want to talk
+    - i guess no
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - i am feeling bad
+    - i am feeling down
+    - i am not fine
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+
+- intent: help
+  examples: |
+    - i need your help
+    - can you help me 
+
+- intent: depression
+  examples: |
+    - i am feeling depressed
+    - having a sense of hopelesness
+    - having constant sadness
+    - feeling despair
+    - having a feeling of melancholy
+
+- intent: stress
+  examples: |
+    - i am feeling really stressed
+    - stress is getting to me
+    - i am feeling overwhelmed
+    - i am exhausted
+    - tension
+    - i am feeling tensed
+    - having strain
+    - getting pressure
+    - feeling pressurised
+    - pressure
+    - pressurised
+
+- intent: anxiety
+  examples: |
+    - feeling nervousness
+    - apprehension
+    - unease
+    - worry
+    - feeling worried
+    - worry
+    - uneasy
+
+- intent: happyreason
+  examples: |
+    - i am happy because
+    - the reason for my happiness is
+    - i am feeling good because 

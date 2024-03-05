@@ -1,0 +1,194 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_ask
+  - intent: happyreason
+  - action: utter_respond
+
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: deny
+  - action: utter_share
+  - action: utter_talk
+  - intent: deny
+  - action: utter_goodbye
+
+- story: stress path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: affirm
+  - action: utter_specify
+  - intent: stress
+  - action: utter_stress
+  - action: utter_wrong
+  - intent: affirm
+  - action: utter_link1
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: stress path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: deny
+  - action: utter_share
+  - action: utter_talk
+  - intent: affirm
+  - action: utter_specify
+  - intent: stress
+  - action: utter_stress
+  - action: utter_wrong
+  - intent: affirm
+  - action: utter_link1
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: stress path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: affirm
+  - action: utter_specify
+  - intent: stress
+  - action: utter_stress
+  - action: utter_wrong
+  - intent: deny
+  - action: utter_goodbye
+
+- story: depression path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: affirm
+  - action: utter_specify
+  - intent: depression
+  - action: utter_depressed
+  - action: utter_wrong
+  - intent: affirm
+  - action: utter_link2
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: depression path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: deny
+  - action: utter_share
+  - action: utter_talk
+  - intent: affirm
+  - action: utter_specify
+  - intent: depression
+  - action: utter_depressed
+  - action: utter_wrong
+  - intent: affirm
+  - action: utter_link2
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: depression path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: affirm
+  - action: utter_specify
+  - intent: depression
+  - action: utter_depressed
+  - action: utter_wrong
+  - intent: deny
+  - action: utter_goodbye
+
+- story: anxiety path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: affirm
+  - action: utter_specify
+  - intent: anxiety
+  - action: utter_anxiety
+  - action: utter_wrong
+  - intent: affirm
+  - action: utter_link3
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: anxiety path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: deny
+  - action: utter_share
+  - action: utter_talk
+  - intent: affirm
+  - action: utter_specify
+  - intent: anxiety
+  - action: utter_anxiety
+  - action: utter_wrong
+  - intent: affirm
+  - action: utter_link3
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: anxiety path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_console
+  - intent: affirm
+  - action: utter_specify
+  - intent: anxiety
+  - action: utter_anxiety
+  - action: utter_wrong
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Restart conversation on "hi"
+  steps:
+    - intent: greet
+    - action: action_restart_conversation
+
+- story: End conversation on "bye"
+  steps:
+    - intent: goodbye
+    - action: action_goodbye
+
